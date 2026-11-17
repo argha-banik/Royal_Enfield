@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal | Enfield</title>
+    <link rel="shortcut icon" href="./img_vid/E2j3y4jB48fQ1638875637694.PNG">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+</head>
+<body>
+    <div id="main">
+        <div id="page1">
+            <video autoplay loop muted src="./img_vid/videoplayback.mp4"></video>
+            <div id="page1-content">
+                <div class="nav">
+                    <img src="./img_vid/royal-enfield.png">
+                    <h4>MENU</h4>
+                </div>
+                <h1 class="text">
+                    <span>B</span>
+                    <span>u</span>
+                    <span>i</span>
+                    <span>l</span>
+                    <span>t</span>
+                    <span class="space"></span>
+                    <span>L</span>
+                    <span>i</span>
+                    <span>k</span>
+                    <span>e</span>
+                    <span class="space"></span>
+                    <span>a</span>
+                    <span class="space"></span>
+                    <span>G</span>
+                    <span>u</span>
+                    <span>n</span>
+                </h1>
+            </div>
+        </div>
+        <div id="page2">
+            <div class="marquee-nav">
+                <div class="marquee-content">
+                  <a href="#Classic_350" data-section="Classic_350">Classic 350</a>
+                  <a href="#Guerrilla_450" data-section="Guerrilla_450">Guerrilla 450</a>
+                  <a href="#Shotgun_650" data-section="Shotgun_650">Shotgun 650</a>
+                  <a href="#Himalayan" data-section="Himalayan">New Himalayan</a>
+                  <a href="#Bullet_350" data-section="Bullet_350">Bullet 350</a>
+                  <a href="#Super_Meteor_650" data-section="Super_Meteor_650">Super Meteor 650</a>
+                  <a href="#Hunter_350" data-section="Hunter_350">Hunter 350</a>
+                </div>
+              </div>
+        
+              <div class="content" id="content">
+                <img id="image" src="./bike_img/Classic 350.jpg" alt="Initial Image"> 
+                <!-- <button class="explore-more">Explore More</button> -->
+              </div>
+        </div>
+        <div id="page3" class="page">
+           
+                <!-- Hero Section -->
+            <section class="hero-section">
+              <div class="hero-content">
+                  <h1>Experience the Legacy</h1>
+                  <p>The timeless design, unmatched power, and adventurous spirit of Royal Enfield.</p>
+                  <button class="cta-button">Explore Models</button>
+              </div>
+              <video autoplay loop muted src="./img_vid/hero.mp4" alt="Royal Enfield Hero Image" class="hero-image"</video>
+          </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+          <h2>Unmatched Features</h2>
+          <div class="features">
+              <div class="feature">
+                  <img src="./bike_img/cl.jpg" alt="Classic Design">
+                  <h3>Classic Design</h3>
+                  <p>Timeless aesthetics meet modern engineering for an iconic ride.</p>
+                  <video class="feature-video" muted loop>
+                      <source src="./img_vid/cd.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+              <div class="feature">
+                  <img src="./bike_img/power.jpg" alt="Unmatched Power">
+                  <h3>Unmatched Power</h3>
+                  <p>Feel the thrill of legendary performance on every terrain.</p>
+                  <video class="feature-video" muted loop>
+                      <source src="./img_vid/up.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+              <div class="feature">
+                  <img src="./bike_img/ad.jpg" alt="Built for Adventure">
+                  <h3>Built for Adventure</h3>
+                  <p>Durable, rugged, and ready for any road you choose.</p>
+                  <video class="feature-video" muted loop>
+                      <source src="./img_vid/ad.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+          </div>
+      </section>
+      <script>
+            const features = document.querySelectorAll('.feature');
+
+            features.forEach(feature => {
+                const video = feature.querySelector('.feature-video');
+                feature.addEventListener('mouseover', () => {
+                    if (video) video.play();
+                });
+                feature.addEventListener('mouseout', () => {
+                    if (video) video.pause();
+                    if (video) video.currentTime = 0;
+                });
+            });
+      </script>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <h2>Be Part of the Legend</h2>
+            <p>Join the Royal Enfield community and redefine your ride.</p>
+            <button class="cta-button">Book a Test Ride</button>
+        </section>
+            
+      </div>
+
+
+      <div id="page4">
+
+
+      </div>
+
+    </div>
+    <script>
+        const contentElement = document.getElementById('content');
+        const imageElement = document.getElementById('image');
+    
+        // Image data for each section
+        const sections = {
+        Classic_350: './bike_img/Classic 350.jpg',
+        Guerrilla_450: './bike_img/Guerrilla-450.jpg',
+        Shotgun_650: './bike_img/Shotgun 650jpg.jpg',
+        Himalayan: './bike_img/Himalayan-450.jpg',
+        Bullet_350: './bike_img/Bullet 350.jpg',
+        Super_Meteor_650: '',
+        Hunter_350:'',
+        };
+    
+        // Handle navigation clicks
+        document.querySelectorAll('.marquee-content a').forEach(link => {
+          link.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default anchor behavior
+            const section = event.target.getAttribute('data-section');
+            
+            // Change the image dynamically
+            imageElement.src = sections[section];
+          });
+        });
+
+        
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
